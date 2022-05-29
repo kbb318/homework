@@ -4,13 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레드향 주문하기</title>
 <style>
 .y{ display: inline-block;}
-.con{
-    border: 2px solid gray ;
 
-}
+.bold{ font-weight: bold;}
+textarea{
+        width: 300px;
+        height: 5em;
+    
+    }
+    label{ font-size: 0.8em;}
+
 </style>
 
 </head>
@@ -18,54 +23,71 @@
 <div>
     <div>
     <h1>레드향 주문하기</h1>   
+    <form>
         <div class="con">
-        <span>상품 선택</span>
-        <p>주문할 상품을 선택해 주세요</p>
+            <fieldset>
+       <legend>상품 선택</legend> 
+        <p class="bold">주문할 상품을 선택해 주세요</p>
+           
             <ul>
-                <li>선물용 3kg</li>
-                <li>선물용 5kg</li>
-                <li>가정용 3kg</li>
-                <li>가정용 5kg</li>
+                <li> <input type="checkbox">선물용 3kg
+                        <input name="이름" 
+                        >개 (최대 5개)
+                </li>
+                <li><input type="checkbox">선물용 5kg
+                        <input name="이름" value="1">개 (최대 3개)
+                </li>
+                <li><input type="checkbox">가정용 3kg
+                        <input name="이름">개 (최대 5개)
+                </li>
+                <li><input type="checkbox">가정용 5kg
+                        <input name="이름">개 (최대 3개)
+                </li>
+       
             </ul>
         <p>포장 선택</p>
             <ul>
-                <li>선물 포장</li>
-                <li>선물 포장 안함</li>
+                <li><input type="radio" name="pack">선물 포장</li>
+                <li><input type="radio" name="pack">선물 포장 안 함</li>
             </ul>    
+        </form>
+    </fieldset>
     </div>
 </div>
+
     <div class="con">
-    <div>배송 정보</div>
+        <fieldset>
+    <legend>배송 정보</legend>
     <div>
         <ul>
-            <li>이름 <form>
+            <li>이름 
                     <input name="이름">
-                </form>
             </li>
             <li>배송 주소
-                <form>
-                    <input name="배송 주소">
-                </form>
+<input name="배송 주소">
+
             </li>
             <li>이메일
-                <form>
+
                     <input name="이메일">
-                </form>
+ 
             </li>
             <li>연락처
-                <form>
+
                     <input name="연락처">
-                </form>
+ 
             </li>
             <li>배송 지정
-                <form>
-                    <input name="배송 지정">
-                </form>
+
+                    <input type="date" value="xxx" min="yyy" max="zzz">
+                    <label>(주문일로부터 최소 3일 이후)</label>
+
             </li>
             <li>메모<textarea></textarea></li>
         </ul>
     </div>
 
+</fieldset>
 </div>
     <div class="y">
         <button>주문하기</button>
